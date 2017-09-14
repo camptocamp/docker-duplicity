@@ -7,6 +7,7 @@ RUN apt-get update \
   && apt-get install -y duplicity python-setuptools \
   && apt-get install -y \
     python-boto python-swiftclient python-pexpect openssh-client \
+  && easy_install -U boto \
   && rm -rf /var/apt/lists/*
 
 VOLUME [ "/root/.cache/duplicity" ]
